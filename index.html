@@ -1,67 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTP-8"> </meta>
-        <meta name="viewpoint" content="width=device-widt,intial-scale=1.0"> </meta>
-        <title> MY BLOG </title>
-        <link rel="stylesheet" href="vim.css"></link>
-    </head>
-    <body>
-        <header class="header">
-            <h1>THE VEE BLOG</h1>
-        </header>
-        <div class="vickmary">
-            <vickmary>
-                <img src="https://i.ibb.co/h84HB8c/DSC-0918.jpg"border="0">
-                <img src="https://i.ibb.co/wcmFvs9/DSC-0894-2.jpg" alt="DSC-0894-2" border="0">
-                <p>Hello everyone I hope you’re having a lovely day and a wonderful week. 
-                    I want to take this opportunity to showcase my blog on my amazing visit to <b>Mamba Village</b> located in <b>Nairobi.</b></p>
-                <p>There are a lot of actives to do there including:
-                    <ul>
-                        <li>Watching ostriches.</li>
-                        <li>Boat Riding.</li>
-                        <li>Face painting.</li>
-                        <li>Sight seeing</li>
-                     </ul>
-            </vickmary>
-         </div>         
-            <br>
-            <h2>THE CROCODILE SPOT</h2>
-             <p>
-                The thing that I found most fascinating was the  <i><b>Nile crocodile</b></i>  with its long and elongated body with a 
-                muscular tail.
-             </p>
-            <p>I did get a few photos of the crocodie :) </p>
-        <div class="vickmaryy">
-            <vickmaryy>
-                <img src="https://i.ibb.co/vknJ4nY/DSC-0836-3.jpg"border="0">
-                <img src="https://i.ibb.co/zRMvhNj/DSC-0837-2.jpg"border="0">
-                <img src="https://i.ibb.co/Wx08xX1/DSC-0818-3.jpg"border="0">
-                <img src="https://i.ibb.co/S5H9hBV/DSC-0849-3.jpg"border="0">
-            </vickmaryy>
-        </div>
-          <br>
-           <h3> <i>FUN FACTS </i></h3>
-             <p>The most fascinting things about crocodiles are:
-                <ul>
-                    <li>Large crocodiles can go over a year without eating. </li>
-                    <li>Crocodiles do not sweat. </li>
-                    <li>Crocodile can hold their breath underwater for over 1 hour. </li>
-                    <li>Crocodiles can sleep with one eye wide open. </li>
-                    <li>Crocodiles can grow 4000 over a lifetime.</li>
-                </ul>
-             <p>Well that is all I had for today and Thank you so much for taking your time to view and read my website.</p>
-             <p>I also have a photo gallery the link is down below.Thank you so much.</p>
-             <p>@https://keithwasik.github.io/vim4/vim3%20-%20Copy.html</p> 
-            
-        <div class="you">
-           <you>
-             See you later <i>alligator</i></p>  
-           </you>
-        </div>
-           
-         
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE VEE BLOG | Mamba Village</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --nature-green: #2d5a27;
+            --gold: #d4af37;
+            --light-bg: #fdfcf0;
+        }
 
-             
-    </body>
+        body {
+            background-color: var(--light-bg);
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.ibb.co/vknJ4nY/DSC-0836-3.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -60px auto 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.05);
+            border-color: var(--gold);
+        }
+
+        /* Fun Fact Section Styling */
+        .fact-section {
+            background: #f0f4ef;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 8px solid var(--nature-green);
+            margin: 30px 0;
+        }
+
+        .fact-list {
+            columns: 2; /* Splits the 10 facts into two columns on desktop */
+            column-gap: 30px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .fact-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .fact-list li::before {
+            content: "🐊 ";
+        }
+
+        .interaction-box {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .like-btn {
+            background-color: var(--nature-green);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .gallery-link {
+            display: block;
+            text-align: center;
+            color: var(--nature-green);
+            font-weight: bold;
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+
+        footer { text-align: center; padding: 40px; color: var(--nature-green); font-weight: bold; }
+        
+        @media (max-width: 600px) {
+            .fact-list { columns: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>THE ANIMAL BLOG</h1>
+        <p>A Breathtaking Wildlife Experience</p>
+    </header>
+
+    <div class="container">
+        <p>Welcome to my animal gallery, where I visited <b>Mamba Village</b> and enjoyed the breathtaking site of the <b>Nile crocodile</b>.</p>
+        
+        <h2>THE CROCODILE SPOT</h2>
+        <p><i>(Tip: Click a photo to discover a secret crocodile fact!)</i></p>
+        
+        <div class="photo-grid">
+            <img src="https://i.ibb.co/zRMvhNj/DSC-0837-2.jpg" onclick="showRandomFact()">
+            <img src="https://i.ibb.co/Wx08xX1/DSC-0818-3.jpg" onclick="showRandomFact()">
+            <img src="https://i.ibb.co/S5H9hBV/DSC-0849-3.jpg" onclick="showRandomFact()">
+        </div>
+
+        <div class="fact-section">
+            <h3>10 Things You Didn't Know About Crocodiles</h3>
+            <ul class="fact-list">
+                <li><b>Dinosaur Survivors:</b> They have existed for 240 million years.</li>
+                <li><b>Bone Crushers:</b> They have the strongest bite force on Earth.</li>
+                <li><b>Night Hunters:</b> Their eyes glow to see in total darkness.</li>
+                <li><b>The Death Roll:</b> They spin to take down large prey.</li>
+                <li><b>Stone Swallowers:</b> Stones in their stomach help them dive.</li>
+                <li><b>Tail Power:</b> They swim as fast as motorboats.</li>
+                <li><b>Nest Secrets:</b> Nest heat determines if babies are boys or girls.</li>
+                <li><b>Smart Reptiles:</b> They can remember human faces.</li>
+                <li><b>Mouth Gaping:</b> They open their mouths to stay cool.</li>
+                <li><b>Natural Armor:</b> Their skin is reinforced with bone plates.</li>
+            </ul>
+        </div>
+
+        <div class="interaction-box">
+            <button class="like-btn" onclick="addLike()">❤️ Like (<span id="like-count">0</span>)</button>
+        </div>
+
+        <a href="https://keithwasik.github.io/my-wallpaper-gallery/" class="gallery-link">Back to Main Portfolio</a>
+    </div>
+
+    <footer>
+        See you later, alligator! 🐊
+    </footer>
+
+    <script>
+        // Like Counter Logic
+        let likes = 0;
+        function addLike() {
+            likes++;
+            document.getElementById('like-count').innerText = likes;
+        }
+
+        // Random Fact Logic for the Photos
+        const extraFacts = [
+            "Crocodiles can hold their breath for over an hour!",
+            "They can grow over 4,000 teeth in one lifetime!",
+            "A crocodile's heart is the most complex of any animal!",
+            "They can sleep with one eye wide open to watch for danger!",
+            "Crocodiles actually produce tears, but not because they are sad!"
+        ];
+
+        function showRandomFact() {
+            const randomFact = extraFacts[Math.floor(Math.random() * extraFacts.length)];
+            alert("🐊 CROC FACT: " + randomFact);
+        }
+    </script>
+</body>
 </html>

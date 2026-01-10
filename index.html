@@ -170,6 +170,26 @@
     <footer>
         See you later, alligator! 🐊
     </footer>
+    <div style="background: rgba(34, 139, 34, 0.9); border: 1px solid white; padding: 10px; position: fixed; bottom: 20px; right: 20px; border-radius: 10px; z-index: 1000;">
+    <audio id="natureMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="toggleNature()" id="natureBtn" style="background: white; border: none; padding: 5px 15px; cursor: pointer; font-family: 'Montserrat';">🍃 PLAY NATURE SOUNDS</button>
+</div>
+
+<script>
+    function toggleNature() {
+        var music = document.getElementById("natureMusic");
+        var btn = document.getElementById("natureBtn");
+        if (music.paused) {
+            music.play();
+            btn.innerHTML = "🔇 STOP SOUNDS";
+        } else {
+            music.pause();
+            btn.innerHTML = "🍃 PLAY NATURE SOUNDS";
+        }
+    }
+</script>
 
     <script>
         // Like Counter Logic
@@ -195,3 +215,5 @@
     </script>
 </body>
 </html>
+
+
